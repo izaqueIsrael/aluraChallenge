@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    />
+    <title>Decoder</title>
+  </head>
+
+  <body
+    class="w-full bg-[#f3f5fc] min-h-screen max-w-[1440px] flex flex-col items-center lg:flex-row lg:gap-10 xl:mx-auto"
+  >
+    <header
+      class="w-11/12 mt-3 lg:mt-10 lg:w-auto lg:min-h-[85vh] lg:items-start lg:justify-start lg:ml-5"
+    >
+      <div class="w-10">
+        <img alt="logo" src="<%= require('./assets/images/logo.png') %>" />
+      </div>
+    </header>
+    <main
+      class="w-full flex flex-col items-center lg:min-h-screen lg:flex-row lg:gap-10"
+    >
+      <section
+        class="w-11/12 flex flex-col items-center justify-around lg:w-9/12 lg:min-h-[75vh] lg:mt-36"
+      >
+        <textarea
+          id="input-text"
+          class="bg-transparent text-[#0A3871] w-full min-h-[28vh] font-inter text-4xl mt-20 placeholder-[#0A3871] resize-none lg:mt-0 focus:outline-none"
+          aria-label="insert a word or phrase"
+          placeholder="Digite seu texto"
+        ></textarea>
+
+        <div class="flex flex-col justify-start items-start w-full gap-3 mt-52">
+          <div>
+            <p id="alert-text" class="hidden font-inter text-red-500">
+              Texto inválido. Apenas letras minúsculas e sem acentos são
+              permitidas.
+            </p>
+          </div>
+
+          <div class="flex gap-2 w-full">
+            <img
+              alt="info"
+              src="<%= require('./assets/images/attention.png') %>"
+              class="w-4 h-4"
+            />
+            <h2 class="font-inter text-[#343A40] leading-4 text-xs">
+              Apenas letras minúsculas e sem acento.
+            </h2>
+          </div>
+
+          <div class="flex flex-col gap-3 w-full md:flex-row">
+            <button
+              id="encrypt-btn"
+              class="group border-[#0A3871] border-2 p-6 bg-[#0A3871] rounded-3xl transition duration-300 ease-in-out hover:bg-transparent md:w-6/12"
+            >
+              <p
+                class="font-inter text-white text-lg transition duration-300 ease-in-out hover:text-[#0A3871]"
+              >
+                Criptografar
+              </p>
+            </button>
+            <button
+              id="decrypt-btn"
+              class="group border-[#0A3871] border-2 p-6 bg-transparent rounded-3xl transition duration-300 ease-in-out hover:bg-[#0A3871] md:w-6/12"
+            >
+              <p
+                class="font-inter text-[#0A3871] text-lg transition duration-300 ease-in-out hover:text-white"
+              >
+                Descriptografar
+              </p>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        id="result-section"
+        class="flex flex-col justify-center bg-white rounded-3xl shadow-2xl w-11/12 mt-3 mb-3 leading-7 min-h-48 lg:min-h-[95vh] lg:max-w-sm 2xl:min-h-[80vh] lg:mr-5"
+      >
+        <div
+          id="image-div"
+          class="hidden lg:flex items-center justify-center lg:max-w-96"
+        >
+          <img
+            alt="searching"
+            src="<%= require('./assets/images/searching.png') %>"
+            class="w-[80%]"
+          />
+        </div>
+        <div
+          id="text-div"
+          class="w-full flex flex-col items-center justify-center"
+        >
+          <div class="w-11/12">
+            <h2 class="font-inter text-2xl font-bold text-center">
+              Nenhuma mensagem encontrada
+            </h2>
+            <p
+              class="font-inter font-normal leading-6 text-center text-md m-2 text-[#495057]"
+            >
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
+        </div>
+
+        <div
+          id="output-div"
+          class="hidden w-full h-[93vh] flex-col items-center justify-between 2xl:justify-around"
+        >
+          <div class="w-11/12 p-4">
+            <h2 class="font-inter text-2xl font-bold text-center">
+              Resultado:
+            </h2>
+            <p
+              id="output-text"
+              class="font-inter font-normal leading-6 text-center text-md m-2 text-[#495057]"
+            ></p>
+          </div>
+          <div class="w-11/12 p-4 flex flex-col justify-center gap-3">
+            <p id="outputCopyAlert" class="hidden font-inter text-red-500">
+              Texto copiado para área de transferência
+            </p>
+
+            <button
+              id="clean-btn"
+              class="group border-[#0A3871] border-2 p-6 bg-[#0A3871] rounded-3xl transition duration-300 ease-in-out hover:bg-transparent md:w-full"
+            >
+              <p
+                class="font-inter text-white text-lg transition duration-300 ease-in-out hover:text-[#0A3871]"
+              >
+                Clean
+              </p>
+            </button>
+
+            <button
+              id="copy-btn"
+              class="group border-[#0A3871] border-2 p-6 bg-transparent rounded-3xl transition duration-300 ease-in-out hover:bg-[#0A3871] md:w-full"
+            >
+              <p
+                class="font-inter text-[#0A3871] text-lg transition duration-300 ease-in-out hover:text-white"
+              >
+                Copiar
+              </p>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
