@@ -1,0 +1,26 @@
+{
+    "ariaLabels": {
+      "inputText": "insert a word or phrase"
+    },
+    "placeholders": {
+      "inputText": "Type your text"
+    },
+    "alts": {
+      "logo": "logo",
+      "info": "info",
+      "searching": "searching"
+    },
+    "messages": {
+      "invalidText": "Invalid text. Only lowercase letters without accents are allowed.",
+      "infoText": "Only lowercase letters and no accent.",
+      "noMessage": "No message found",
+      "resultTitle": "Result:",
+      "copyAlert": "Text copied to clipboard",
+      "encrypt": "Encrypt",
+      "decrypt": "Decrypt",
+      "clean": "Clean",
+      "copy" : "Copy",
+      "placeholderText": "Type a text you want to encrypt or decrypt."
+    }
+  }
+  
