@@ -3,7 +3,6 @@ export class LanguageLoader {
       fetch(`./locales/${language}.json`)
         .then(response => response.json())
         .then(texts => {
-          document.title = texts.title;
   
           const inputText = document.getElementById("input-text");
           if (inputText) {

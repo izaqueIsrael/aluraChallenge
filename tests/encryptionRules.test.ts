@@ -1,4 +1,4 @@
-import { encryptionRules, decryptRules } from './../src/components/encryptionRules';
+import { encryptionRules, decryptRules } from './../src/components/EncryptionRules';
 
 describe('Encryption and Decryption Rules', () => {
   test('encrypts text correctly', () => {

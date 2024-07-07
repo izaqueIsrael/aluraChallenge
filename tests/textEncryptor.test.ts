@@ -1,4 +1,4 @@
-import { TextEncryptor } from '../src/components/textEncryptor';
+import { TextEncryptor } from './../src/components/TextEncryptor';
 import { JSDOM } from 'jsdom';
 
 declare global {
