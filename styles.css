@@ -724,6 +724,14 @@ video {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+.group:hover .group-hover\:text-\[\#0A3871\] {
+  --tw-text-opacity: 1;
+  color: rgb(10 56 113 / var(--tw-text-opacity));
+}
+.group:hover .group-hover\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 @media (min-width: 768px) {
 
   .md\:w-6\/12 {
