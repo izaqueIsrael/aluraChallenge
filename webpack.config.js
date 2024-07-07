@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/main.ts',
@@ -30,7 +31,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
+        test: /\.(png|jpe?g|gif|svg|ico)$/i,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
@@ -44,9 +45,15 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: './src/assets/favicon.png',
     }),
     new MiniCssExtractPlugin({
       filename: 'styles.css',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: './src/assets/favicon.png', to: 'images/favicon.png' },  // Adicione esta linha
+      ],
     }),
   ],
   mode: 'development',
