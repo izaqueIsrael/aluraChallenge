@@ -1,4 +1,4 @@
-import { encryptionRules, decryptRules } from "./encryptionRules";
+import { encryptionRules, decryptRules } from "./EncryptionRules";
 import { getElementById, querySelector } from "../utils/domUtils";
 
 export class TextEncryptor {
