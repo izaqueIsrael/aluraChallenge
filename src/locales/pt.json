@@ -1,0 +1,26 @@
+{
+    "ariaLabels": {
+      "inputText": "insira uma palavra ou frase"
+    },
+    "placeholders": {
+      "inputText": "Digite seu texto"
+    },
+    "alts": {
+      "logo": "logo",
+      "info": "info",
+      "searching": "procurando"
+    },
+    "messages": {
+      "invalidText": "Texto inválido. Apenas letras minúsculas e sem acentos são permitidas.",
+      "infoText": "Apenas letras minúsculas e sem acento.",
+      "noMessage": "Nenhuma mensagem encontrada",
+      "resultTitle": "Resultado:",
+      "copyAlert": "Texto copiado para área de transferência",
+      "encrypt": "Criptografar",
+      "decrypt": "Descriptografar",
+      "clean": "Limpar",
+      "copy": "Copiar",
+      "placeholderText": "Digite um texto que você deseja criptografar ou descriptografar."
+    }
+  }
+  

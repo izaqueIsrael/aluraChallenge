@@ -52,7 +52,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        { from: './src/assets/favicon.png', to: 'images/favicon.png' },  // Adicione esta linha
+        { from: './src/assets/favicon.png', to: 'images/favicon.png' },
+        { from: './src/locales', to: 'locales' },  // Adiciona esta linha para copiar a pasta locales
       ],
     }),
   ],

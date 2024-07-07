@@ -14,10 +14,21 @@
     class="w-full bg-[#f3f5fc] min-h-screen max-w-[1440px] flex flex-col items-center lg:flex-row lg:gap-10 xl:mx-auto"
   >
     <header
-      class="w-11/12 mt-3 lg:mt-10 lg:w-auto lg:min-h-[85vh] lg:items-start lg:justify-start lg:ml-5"
+      class="w-11/12 mt-3 flex justify-between items-center gap-5 lg:flex-col lg:mt-10 lg:w-auto lg:min-h-[85vh] lg:items-start lg:justify-start lg:ml-5"
     >
       <div class="w-10">
-        <img alt="logo" src="<%= require('./assets/images/logo.png') %>" />
+        <img
+          alt="logo"
+          data-alt="logo"
+          src="<%= require('./assets/images/logo.png') %>"
+        />
+      </div>
+      <div>
+        <select class="rounded-full" id="language-selector">
+          <option value="en">English</option>
+          <option value="pt" selected>Português</option>
+          <option value="es">Español</option>
+        </select>
       </div>
     </header>
     <main
@@ -44,6 +55,7 @@
           <div class="flex gap-2 w-full">
             <img
               alt="info"
+              data-alt="info"
               src="<%= require('./assets/images/attention.png') %>"
               class="w-4 h-4"
             />
@@ -86,6 +98,7 @@
         >
           <img
             alt="searching"
+            data-alt="searching"
             src="<%= require('./assets/images/searching.png') %>"
             class="w-[80%]"
           />
@@ -95,11 +108,12 @@
           class="w-full flex flex-col items-center justify-center"
         >
           <div class="w-11/12">
-            <h2 class="font-inter text-2xl font-bold text-center">
+            <h2 id="noMessage" class="font-inter text-2xl font-bold text-center">
               Nenhuma mensagem encontrada
             </h2>
             <p
               class="font-inter font-normal leading-6 text-center text-md m-2 text-[#495057]"
+              id="placeholderText"
             >
               Digite um texto que você deseja criptografar ou descriptografar.
             </p>
@@ -111,7 +125,7 @@
           class="hidden w-full h-[93vh] flex-col items-center justify-between 2xl:justify-around"
         >
           <div class="w-11/12 p-4">
-            <h2 class="font-inter text-2xl font-bold text-center">
+            <h2 id="resultTitle" class="font-inter text-2xl font-bold text-center">
               Resultado:
             </h2>
             <p
