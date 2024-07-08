@@ -122,7 +122,7 @@ Os testes foram feitos com Jest.js e para utiliza-los é muito simples, certifiq
 
 Após a instalação utilize o comando:
 
-    npm run start
+    npm run test
 
 Todos os testes programados serão executados.
 
